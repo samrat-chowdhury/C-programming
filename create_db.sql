@@ -534,8 +534,8 @@ LEFT OUTER JOIN expressions ON (intents.intent_id = expressions.intent_id) AND (
 LEFT OUTER JOIN parameters AS param ON (msgEnt.entity_id = param.entity_id) AND (msgEnt.entity_value = param.parameter_value) AND (param.expression_id = expressions.expression_id)
 ORDER BY timestamp, user_id;
 
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA rasa_ui TO :postgres_user;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA rasa_ui TO :postgres_user;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA rasa_ui TO postgres_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA rasa_ui TO postgres_user;
 
 /* Static Data */
 INSERT INTO response_type (response_type_text) VALUES ('DEFAULT'),('RICH TEXT');
